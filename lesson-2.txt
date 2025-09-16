@@ -1,0 +1,9 @@
+1.
+git init -> khởi tạo repo git trong thư mục hiện tại
+git add <file_name> -> chọn file cụ thể để commit
+git add . -> chọn toàn bộ file để commit
+git commit -m "message" -> commit kèm theo mô tả các thay đổi
+
+2.
+file1: repository
+file2, file3: working directory
