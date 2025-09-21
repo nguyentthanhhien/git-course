@@ -1,0 +1,93 @@
+1.
+git commit -- amend: edit commit cuối cùng bằng cách mở editor
+git commit -- amend -m "<message>": edit commit cuối cùng bằng cách sửa trực tiếp trong <message>
+git restore -- staged <file>: chuyển file từ vùng staging area về vùng working directory
+git reset HEAD~1: quay về commit trước commit cuối cùng
+
+
+2.
+a. tạo 3 file1,2,3
+Local: file1, file2, file3
+Working directory: 
+Staging:
+Repository:
+
+b. git init
+Local: file1, file2, file3
+Working directory: file1, file2, file3
+Staging:
+Repository:
+
+c. git commit -m"init project"
+Local: file1, file2, file3
+Working directory: file1, file2, file3
+Staging:
+Repository:
+
+d. git add file 1
+Local: file1, file2, file3
+Working directory: file1, file2, file3
+Staging: file1
+Repository:
+
+e. git commit -m"add file"
+Local: file1, file2, file3
+Working directory: file1, file2, file3
+Staging:
+Repository: file1
+
+f. git add.
+Local: file1, file2, file3
+Working directory: file1, file2, file3
+Staging: file2, file3
+Repository: file1
+
+g. git restore --staged file2
+Local: file1, file2, file3
+Working directory: file1, file2, file3
+Staging: file3
+Repository: file1
+
+h. git commit -m"add all files"
+Local: file1, file2, file3
+Working directory: file1, file2, file3
+Staging:
+Repository: file1, file3
+
+i. git reset HEAD~1
+Local: file1, file2, file3
+Working directory: file1, file2, file3
+Staging: file3
+Repository: file1
+
+
+3.
+a. git init
+Local: 
+Working directory: 
+Staging:
+Repository:
+
+b. Tạo file file1.txt, file2.txt, oops/file3.txt
+Local: file1.txt, file2.txt, oops/file3.txt
+Working directory: file1.txt, file2.txt, oops/file3.txt
+Staging:
+Repository:
+
+c. Thêm file .gitignore, thêm vào 2 dòng file1.txt và oops/
+Local: file1.txt, file2.txt, oops/file3.txt, .gitignore
+Working directory: file2.txt, .gitignore
+Staging: 
+Repository:
+
+d. git add .
+Local: file1.txt, file2.txt, oops/file3.txt, .gitignore
+Working directory: file2.txt, .gitignore
+Staging: file2.txt, .gitignore
+Repository:
+
+e. git commit -m"init project"
+Local: file1.txt, file2.txt, oops/file3.txt, .gitignore
+Working directory: file2.txt, .gitignore
+Staging: 
+Repository: file2.txt, .gitignore
